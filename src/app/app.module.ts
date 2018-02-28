@@ -10,10 +10,12 @@ import { environment } from '../environments/environment';
 import { LoginComponent } from './login/login.component';
 import { CreateComponent } from './create/create.component';
 import { HomeComponent } from './home/home.component';
+import { AccountComponent } from './account/account.component';
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'create', component: CreateComponent},
+  {path: 'account', component: AccountComponent},
   {path: 'home/:user', component: HomeComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'}
 ];
@@ -23,7 +25,8 @@ const appRoutes: Routes = [
     AppComponent,
     LoginComponent,
     CreateComponent,
-    HomeComponent
+    HomeComponent,
+    AccountComponent
   ],
   imports: [
     BrowserModule,
