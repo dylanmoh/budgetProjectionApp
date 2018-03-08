@@ -13,10 +13,12 @@ import { CreateComponent } from './create/create.component';
 import { HomeComponent } from './home/home.component';
 import { CoreModule } from './core/core.module';
 import { ErrorComponent } from './error/error.component';
+import { ActivityComponent } from './activity/activity.component';
 
 const appRoutes: Routes = [
   {path: 'login', component: LoginComponent},
   {path: 'create', component: CreateComponent},
+  {path: 'activity/:user', component: ActivityComponent},
   {path: 'home/:user', component: HomeComponent},
   {path: '', redirectTo: '/login', pathMatch: 'full'},
   {path: '**', redirectTo: '404' },
@@ -29,7 +31,8 @@ const appRoutes: Routes = [
     LoginComponent,
     CreateComponent,
     HomeComponent,
-    ErrorComponent
+    ErrorComponent,
+    ActivityComponent
   ],
   imports: [
     BrowserModule,
